@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+<title>SQL</title>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-147261423-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-147261423-1');
+</script>
+	
+<link rel="stylesheet" media="screen and (min-width:481px)" href="cv.css">
+
+    <!-- Bootstrap Core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Theme CSS -->
+    <link href="css/clean-blog.min.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    
+ <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    Menu <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="https://giacomosaccaggi.github.io">Home</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                  
+                    <li>
+                        <a href="https://giacomosaccaggi.github.io/Excel/">Excel articles</a>
+                    </li>
+                    <li>
+                        <a href="https://giacomosaccaggi.github.io/all.html">All projects</a>
+                    </li>
+                    <li>
+                        <a href="https://giacomosaccaggi.github.io/contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+    <header class="intro-header" style="background-image: url('sfondo.png')">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="site-heading">
+                        <h2>SQL - Ricerca con filtro</h2>
+                        <hr class="small">
+                        <h5>Alla base dei database</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        
+
+
+
+
+
+<p class=MsoNormal>In SQL, la parola chiave WHERE permette di filtrare in una
+tabella sia in base a valori testuali che numerici. Ci sono alcuni operatori di
+confronto che si possono utilizzare:</p>
+
+<p class=MsoListParagraphCxSpFirst style='text-indent:-18.0pt;mso-list:l0 level1 lfo1'><![if !supportLists]><span
+style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='color:red'>= </span>uguale</p>
+
+<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.0pt;mso-list:l0 level1 lfo1'><![if !supportLists]><span
+style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='color:red'>&lt;&gt; </span>diverso</p>
+
+<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.0pt;mso-list:l0 level1 lfo1'><![if !supportLists]><span
+style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'>3.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='color:red'>&lt; </span>minore di</p>
+
+<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.0pt;mso-list:l0 level1 lfo1'><![if !supportLists]><span
+style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'>4.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='color:red'>&gt; </span>maggiore di</p>
+
+<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.0pt;mso-list:l0 level1 lfo1'><![if !supportLists]><span
+style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'>5.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='color:red'>&lt;= </span>minore o
+uguale a</p>
+
+<p class=MsoListParagraphCxSpLast style='text-indent:-18.0pt;mso-list:l0 level1 lfo1'><![if !supportLists]><span
+lang=EN-US style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol;mso-ansi-language:EN-US'><span style='mso-list:Ignore'>6.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US style='color:red;mso-ansi-language:
+EN-US'>&gt;= </span><span class=SpellE><span lang=EN-US style='mso-ansi-language:
+EN-US'>maggiore</span></span><span lang=EN-US style='mso-ansi-language:EN-US'>
+o <span class=SpellE>uguale</span> a<o:p></o:p></span></p>
+
+<p class=MsoNormal><span class=SpellE><span lang=EN-US style='mso-ansi-language:
+EN-US'>Esempio</span></span><span lang=EN-US style='mso-ansi-language:EN-US'>
+con <span class=SpellE>valori</span> <span class=SpellE>testuali</span>:<o:p></o:p></span></p>
+
+<div style='mso-element:para-border-div;border:none;border-left:solid #33AACC 3.0pt;
+padding:0cm 0cm 0cm 0cm;background:#EBF4F7;margin-left:3.0pt;margin-right:3.0pt'><pre
+style='background:#EBF4F7;border:none;mso-border-left-alt:solid #33AACC 3.0pt;
+padding:0cm;mso-padding-alt:0cm 0cm 0cm 0cm'><code><span lang=EN-US
+style='color:#3D4251;background:#EBF4F7;mso-ansi-language:EN-US'>SELECT *<o:p></o:p></span></code></pre><pre
+style='background:#EBF4F7;border:none;mso-border-left-alt:solid #33AACC 3.0pt;
+padding:0cm;mso-padding-alt:0cm 0cm 0cm 0cm'><code><span lang=EN-US
+style='color:#3D4251;background:#EBF4F7;mso-ansi-language:EN-US'>FROM <span
+class=SpellE>tabella</span><o:p></o:p></span></code></pre><pre
+style='background:#EBF4F7;border:none;mso-border-left-alt:solid #33AACC 3.0pt;
+padding:0cm;mso-padding-alt:0cm 0cm 0cm 0cm'><code><span style='color:#3D4251;
+background:#EBF4F7'>WHERE <span class=SpellE>nome_variabile</span> = 'una stringa presente';</span></code><span
+style='font-size:12.0pt;color:#4D5356'><o:p></o:p></span></pre></div>
+
+<p class=MsoNormal>Esempio <span class=GramE>con<span
+style='mso-spacerun:yes'> </span>valori</span> numerici:</p>
+
+<div style='mso-element:para-border-div;border:none;border-left:solid #33AACC 3.0pt;
+padding:0cm 0cm 0cm 0cm;background:#EBF4F7;margin-left:3.0pt;margin-right:3.0pt'><pre
+style='background:#EBF4F7;border:none;mso-border-left-alt:solid #33AACC 3.0pt;
+padding:0cm;mso-padding-alt:0cm 0cm 0cm 0cm'><code><span style='color:#3D4251;
+background:#EBF4F7'>SELECT *<o:p></o:p></span></code></pre><pre
+style='background:#EBF4F7;border:none;mso-border-left-alt:solid #33AACC 3.0pt;
+padding:0cm;mso-padding-alt:0cm 0cm 0cm 0cm'><code><span style='color:#3D4251;
+background:#EBF4F7'>FROM tabella<o:p></o:p></span></code></pre><pre
+style='background:#EBF4F7;border:none;mso-border-left-alt:solid #33AACC 3.0pt;
+padding:0cm;mso-padding-alt:0cm 0cm 0cm 0cm'><code><span style='color:#3D4251;
+background:#EBF4F7'>WHERE <span class=SpellE>nome_variabile</span> &gt; 10;</span></code><span
+style='font-size:12.0pt;color:#4D5356'><o:p></o:p></span></pre></div>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>Spesso si desidera selezionare i dati in base a più
+condizioni. Si può costruire le richieste WHERE combinando condizioni multiple
+con AND, le condizioni possono essere riferite alla stessa variabile: </p>
+
+<div style='mso-element:para-border-div;border:none;border-left:solid #33AACC 3.0pt;
+padding:0cm 0cm 0cm 0cm;background:#EBF4F7;margin-left:3.0pt;margin-right:3.0pt'><pre
+style='background:#EBF4F7;border:none;mso-border-left-alt:solid #33AACC 3.0pt;
+padding:0cm;mso-padding-alt:0cm 0cm 0cm 0cm'><code><span lang=EN-US
+style='color:#3D4251;background:#EBF4F7;mso-ansi-language:EN-US'>SELECT *<o:p></o:p></span></code></pre><pre
+style='background:#EBF4F7;border:none;mso-border-left-alt:solid #33AACC 3.0pt;
+padding:0cm;mso-padding-alt:0cm 0cm 0cm 0cm'><code><span lang=EN-US
+style='color:#3D4251;background:#EBF4F7;mso-ansi-language:EN-US'>FROM <span
+class=SpellE>tabella</span><o:p></o:p></span></code></pre><pre
+style='background:#EBF4F7;border:none;mso-border-left-alt:solid #33AACC 3.0pt;
+padding:0cm;mso-padding-alt:0cm 0cm 0cm 0cm'><code><span lang=EN-US
+style='color:#3D4251;background:#EBF4F7;mso-ansi-language:EN-US'>WHERE <span
+class=SpellE>nome_variabile</span> &gt; 10 AND &lt; 20;</span></code><span
+lang=EN-US style='font-size:12.0pt;color:#3D4251;mso-ansi-language:EN-US'><o:p></o:p></span></pre></div>
+
+<p class=MsoNormal>Oppure a variabili differenti: </p>
+
+<div style='mso-element:para-border-div;border:none;border-left:solid #33AACC 3.0pt;
+padding:0cm 0cm 0cm 0cm;background:#EBF4F7;margin-left:3.0pt;margin-right:3.0pt'><pre
+style='background:#EBF4F7;border:none;mso-border-left-alt:solid #33AACC 3.0pt;
+padding:0cm;mso-padding-alt:0cm 0cm 0cm 0cm'><code><span style='color:#3D4251;
+background:#EBF4F7'>SELECT *<o:p></o:p></span></code></pre><pre
+style='background:#EBF4F7;border:none;mso-border-left-alt:solid #33AACC 3.0pt;
+padding:0cm;mso-padding-alt:0cm 0cm 0cm 0cm'><code><span style='color:#3D4251;
+background:#EBF4F7'>FROM tabella<o:p></o:p></span></code></pre><pre
+style='background:#EBF4F7;border:none;mso-border-left-alt:solid #33AACC 3.0pt;
+padding:0cm;mso-padding-alt:0cm 0cm 0cm 0cm'><code><span style='color:#3D4251;
+background:#EBF4F7'>WHERE nome</span></code><span style='color:#3D4251;
+background:#EBF4F7'>_variabile1<code> &gt; 10 <o:p></o:p></code></span></pre><pre
+style='background:#EBF4F7;border:none;mso-border-left-alt:solid #33AACC 3.0pt;
+padding:0cm;mso-padding-alt:0cm 0cm 0cm 0cm'><code><span style='color:#3D4251;
+background:#EBF4F7'>AND nome</span></code><span style='color:#3D4251;
+background:#EBF4F7'>_variabile2<code> = 'una stringa presente';</code></span><span
+style='font-size:12.0pt;color:#4D5356'><o:p></o:p></span></pre></div>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>Può capitare che non tutte le condizioni debbano essere
+rispettate rigorosamente insieme ma che basta che ne sia rispettata una o
+l'altra. In questo caso si utilizza OR:</p>
+
+<div style='mso-element:para-border-div;border:none;border-left:solid #33AACC 3.0pt;
+padding:0cm 0cm 0cm 0cm;background:#EBF4F7;margin-left:3.0pt;margin-right:3.0pt'><pre
+style='background:#EBF4F7;border:none;mso-border-left-alt:solid #33AACC 3.0pt;
+padding:0cm;mso-padding-alt:0cm 0cm 0cm 0cm'><code><span style='color:#3D4251;
+background:#EBF4F7'>SELECT *<o:p></o:p></span></code></pre><pre
+style='background:#EBF4F7;border:none;mso-border-left-alt:solid #33AACC 3.0pt;
+padding:0cm;mso-padding-alt:0cm 0cm 0cm 0cm'><code><span style='color:#3D4251;
+background:#EBF4F7'>FROM tabella<o:p></o:p></span></code></pre><pre
+style='background:#EBF4F7;border:none;mso-border-left-alt:solid #33AACC 3.0pt;
+padding:0cm;mso-padding-alt:0cm 0cm 0cm 0cm'><code><span style='color:#3D4251;
+background:#EBF4F7'>WHERE nome</span></code><span style='color:#3D4251;
+background:#EBF4F7'>_variabile1<code> &gt; 10 <o:p></o:p></code></span></pre><pre
+style='background:#EBF4F7;border:none;mso-border-left-alt:solid #33AACC 3.0pt;
+padding:0cm;mso-padding-alt:0cm 0cm 0cm 0cm'><code><span style='color:#3D4251;
+background:#EBF4F7'>OR nome</span></code><span style='color:#3D4251;background:
+#EBF4F7'>_variabile2<code> = 'una stringa presente';</code></span><span
+style='font-size:12.0pt;color:#4D5356'><o:p></o:p></span></pre></div>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>Un esempio un pelo più complicato (che è più facile da
+scrivere come macro che spiegare in termini così generici) è quando vogliamo ad
+esempio che due condizioni debbano essere rispettate oppure ci basta che ne sia
+rispettata un'altra:</p>
+
+<div style='mso-element:para-border-div;border:none;border-left:solid #33AACC 3.0pt;
+padding:0cm 0cm 0cm 0cm;background:#EBF4F7;margin-left:3.0pt;margin-right:3.0pt'><pre
+style='background:#EBF4F7;border:none;mso-border-left-alt:solid #33AACC 3.0pt;
+padding:0cm;mso-padding-alt:0cm 0cm 0cm 0cm'><code><span lang=EN-US
+style='color:#3D4251;background:#EBF4F7;mso-ansi-language:EN-US'>SELECT *<o:p></o:p></span></code></pre><pre
+style='background:#EBF4F7;border:none;mso-border-left-alt:solid #33AACC 3.0pt;
+padding:0cm;mso-padding-alt:0cm 0cm 0cm 0cm'><code><span lang=EN-US
+style='color:#3D4251;background:#EBF4F7;mso-ansi-language:EN-US'>FROM <span
+class=SpellE>tabella</span><o:p></o:p></span></code></pre><pre
+style='background:#EBF4F7;border:none;mso-border-left-alt:solid #33AACC 3.0pt;
+padding:0cm;mso-padding-alt:0cm 0cm 0cm 0cm'><code><span lang=EN-US
+style='color:#3D4251;background:#EBF4F7;mso-ansi-language:EN-US'>WHERE (nome</span></code><span
+lang=EN-US style='color:#3D4251;background:#EBF4F7;mso-ansi-language:EN-US'>_variabile1<code> &gt; 10 AND &lt; 20) <o:p></o:p></code></span></pre><pre
+style='background:#EBF4F7;border:none;mso-border-left-alt:solid #33AACC 3.0pt;
+padding:0cm;mso-padding-alt:0cm 0cm 0cm 0cm'><code><span style='color:#3D4251;
+background:#EBF4F7'>OR nome</span></code><span style='color:#3D4251;background:
+#EBF4F7'>_variabile2<code> = 'una stringa presente';</code></span><span
+style='font-size:12.0pt;color:#4D5356'><o:p></o:p></span></pre></div>
+
+<p class=MsoNormal>La verifica di intervalli è molto comune in SQL, la funzione
+BETWEEN è utile per filtrare i valori all'interno di un intervallo specificato.
+</p>
+
+<div style='mso-element:para-border-div;border:none;border-left:solid #33AACC 3.0pt;
+padding:0cm 0cm 0cm 0cm;background:#EBF4F7;margin-left:3.0pt;margin-right:3.0pt'><pre
+style='background:#EBF4F7;border:none;mso-border-left-alt:solid #33AACC 3.0pt;
+padding:0cm;mso-padding-alt:0cm 0cm 0cm 0cm'><code><span lang=EN-US
+style='color:#3D4251;background:#EBF4F7;mso-ansi-language:EN-US'>SELECT *<o:p></o:p></span></code></pre><pre
+style='background:#EBF4F7;border:none;mso-border-left-alt:solid #33AACC 3.0pt;
+padding:0cm;mso-padding-alt:0cm 0cm 0cm 0cm'><code><span lang=EN-US
+style='color:#3D4251;background:#EBF4F7;mso-ansi-language:EN-US'>FROM <span
+class=SpellE>tabella</span><o:p></o:p></span></code></pre><pre
+style='background:#EBF4F7;border:none;mso-border-left-alt:solid #33AACC 3.0pt;
+padding:0cm;mso-padding-alt:0cm 0cm 0cm 0cm'><code><span lang=EN-US
+style='color:#3D4251;background:#EBF4F7;mso-ansi-language:EN-US'>WHERE <span
+class=SpellE>nome_variabile</span> <o:p></o:p></span></code></pre><pre
+style='background:#EBF4F7;border:none;mso-border-left-alt:solid #33AACC 3.0pt;
+padding:0cm;mso-padding-alt:0cm 0cm 0cm 0cm'><code><span style='color:#3D4251;
+background:#EBF4F7'>BETWEEN 10 AND 20;</span></code><span style='font-size:
+12.0pt;color:#3D4251'><o:p></o:p></span></pre></div>
+
+<p class=MsoNormal>Questa query è equivalente a quella riscritta qui sotto del
+primo esempio di questa sezione:</p>
+
+<div style='mso-element:para-border-div;border:none;border-left:solid #33AACC 3.0pt;
+padding:0cm 0cm 0cm 0cm;background:#EBF4F7;margin-left:3.0pt;margin-right:3.0pt'><pre
+style='background:#EBF4F7;border:none;mso-border-left-alt:solid #33AACC 3.0pt;
+padding:0cm;mso-padding-alt:0cm 0cm 0cm 0cm'><code><span lang=EN-US
+style='color:#3D4251;background:#EBF4F7;mso-ansi-language:EN-US'>SELECT *<o:p></o:p></span></code></pre><pre
+style='background:#EBF4F7;border:none;mso-border-left-alt:solid #33AACC 3.0pt;
+padding:0cm;mso-padding-alt:0cm 0cm 0cm 0cm'><code><span lang=EN-US
+style='color:#3D4251;background:#EBF4F7;mso-ansi-language:EN-US'>FROM <span
+class=SpellE>tabella</span><o:p></o:p></span></code></pre><pre
+style='background:#EBF4F7;border:none;mso-border-left-alt:solid #33AACC 3.0pt;
+padding:0cm;mso-padding-alt:0cm 0cm 0cm 0cm'><code><span lang=EN-US
+style='color:#3D4251;background:#EBF4F7;mso-ansi-language:EN-US'>WHERE <span
+class=SpellE>nome_variabile</span> &gt; 10 AND &lt; 20;</span></code><span
+lang=EN-US style='font-size:12.0pt;color:#3D4251;mso-ansi-language:EN-US'><o:p></o:p></span></pre></div>
+
+<p class=MsoNormal>Come visto, WHERE è molto utile per filtrare i risultati.
+Tuttavia, se si vuole filtrare in base a molte condizioni, WHERE può diventare
+ingombrante. Per esempio, ipotiziamo di avere una
+variabile City dove sono presenti diverse città, si vuole selezionare solo i
+valori relativi a 'London', 'Milan' e 'Berlin'
+potremmo fare:</p>
+
+<div style='mso-element:para-border-div;border:none;border-left:solid #33AACC 3.0pt;
+padding:0cm 0cm 0cm 0cm;background:#EBF4F7'><pre style='background:#EBF4F7;
+border:none;mso-border-left-alt:solid #33AACC 3.0pt;padding:0cm;mso-padding-alt:
+0cm 0cm 0cm 0cm'><code><span lang=EN-US style='color:#3D4251;background:#EBF4F7;
+mso-ansi-language:EN-US'>SELECT *<o:p></o:p></span></code></pre><pre
+style='background:#EBF4F7;border:none;mso-border-left-alt:solid #33AACC 3.0pt;
+padding:0cm;mso-padding-alt:0cm 0cm 0cm 0cm'><code><span lang=EN-US
+style='color:#3D4251;background:#EBF4F7;mso-ansi-language:EN-US'>FROM <span
+class=SpellE>tabella</span><o:p></o:p></span></code></pre><pre
+style='background:#EBF4F7;border:none;mso-border-left-alt:solid #33AACC 3.0pt;
+padding:0cm;mso-padding-alt:0cm 0cm 0cm 0cm'><code><span lang=EN-US
+style='color:#3D4251;background:#EBF4F7;mso-ansi-language:EN-US'>WHERE City <o:p></o:p></span></code></pre><pre
+style='background:#EBF4F7;border:none;mso-border-left-alt:solid #33AACC 3.0pt;
+padding:0cm;mso-padding-alt:0cm 0cm 0cm 0cm'><code><span lang=EN-US
+style='color:#3D4251;background:#EBF4F7;mso-ansi-language:EN-US'>OR City = 'Milan'<o:p></o:p></span></code></pre><pre
+style='background:#EBF4F7;border:none;mso-border-left-alt:solid #33AACC 3.0pt;
+padding:0cm;mso-padding-alt:0cm 0cm 0cm 0cm'><code><span lang=EN-US
+style='color:#3D4251;background:#EBF4F7;mso-ansi-language:EN-US'>OR City = 'Berlin'<o:p></o:p></span></code></pre><pre
+style='background:#EBF4F7;border:none;mso-border-left-alt:solid #33AACC 3.0pt;
+padding:0cm;mso-padding-alt:0cm 0cm 0cm 0cm'><code><span lang=EN-US
+style='color:#3D4251;background:#EBF4F7;mso-ansi-language:EN-US'>OR City = 'London';</span></code><code><span
+lang=EN-US style='background:#EBF4F7;mso-ansi-language:EN-US'><o:p></o:p></span></code></pre></div>
+
+<p class=MsoNormal>Ma risulta più sensato a livello di programmazione fare:</p>
+
+<div style='mso-element:para-border-div;border:none;border-left:solid #33AACC 3.0pt;
+padding:0cm 0cm 0cm 0cm;background:#EBF4F7'><pre style='background:#EBF4F7;
+border:none;mso-border-left-alt:solid #33AACC 3.0pt;padding:0cm;mso-padding-alt:
+0cm 0cm 0cm 0cm'><code><span lang=EN-US style='color:#3D4251;background:#EBF4F7;
+mso-ansi-language:EN-US'>SELECT *<o:p></o:p></span></code></pre><pre
+style='background:#EBF4F7;border:none;mso-border-left-alt:solid #33AACC 3.0pt;
+padding:0cm;mso-padding-alt:0cm 0cm 0cm 0cm'><code><span lang=EN-US
+style='color:#3D4251;background:#EBF4F7;mso-ansi-language:EN-US'>FROM <span
+class=SpellE>tabella</span><o:p></o:p></span></code></pre><pre
+style='background:#EBF4F7;border:none;mso-border-left-alt:solid #33AACC 3.0pt;
+padding:0cm;mso-padding-alt:0cm 0cm 0cm 0cm'><code><span lang=EN-US
+style='color:#3D4251;background:#EBF4F7;mso-ansi-language:EN-US'>WHERE City IN ('London', 'Milan', 'Berlin');</span></code><code><span
+lang=EN-US style='background:#EBF4F7;mso-ansi-language:EN-US'><o:p></o:p></span></code></pre></div>
+
+<span lang=EN-US style='font-size:11.0pt;line-height:107%;font-family:"Calibri",sans-serif;
+mso-ascii-theme-font:minor-latin;mso-fareast-font-family:Calibri;mso-fareast-theme-font:
+minor-latin;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:"Times New Roman";
+mso-bidi-theme-font:minor-bidi;mso-ansi-language:EN-US;mso-fareast-language:
+EN-US;mso-bidi-language:AR-SA'><br clear=all style='mso-special-character:line-break;
+page-break-before:always'>
+</span>
+
+      <br><br>
+        <br><br><br>
+  </div>
+
+
+   <!-- Footer -->
+    <footer>
+       <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <ul class="list-inline text-center">
+                        <li>
+                            <a href="https://twitter.com/SaccaggiGiacomo">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/in/giacomo-saccaggi-782439163/">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/GiacomoSaccaggi/">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                    <p class="copyright text-muted">Copyright &copy; GiacomoSaccaggi</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    </body>
+
+</html>

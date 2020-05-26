@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+<title>SQL</title>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-147261423-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-147261423-1');
+</script>
+	
+<link rel="stylesheet" media="screen and (min-width:481px)" href="cv.css">
+
+    <!-- Bootstrap Core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Theme CSS -->
+    <link href="css/clean-blog.min.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    
+ <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    Menu <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="https://giacomosaccaggi.github.io">Home</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                  
+                    <li>
+                        <a href="https://giacomosaccaggi.github.io/Excel/">Excel articles</a>
+                    </li>
+                    <li>
+                        <a href="https://giacomosaccaggi.github.io/all.html">All projects</a>
+                    </li>
+                    <li>
+                        <a href="https://giacomosaccaggi.github.io/contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+    <header class="intro-header" style="background-image: url('sfondo.png')">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="site-heading">
+                        <h2>SQL - Introduzione</h2>
+                        <hr class="small">
+                        <h5>Alla base dei database</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        SQL, che sta per Structured Query Language, è un linguaggio per interagire con i dati memorizzati in un database relazionale.
+<br>Si può pensare a un database relazionale come a una raccolta di tabelle. Una tabella è solo un insieme di righe e colonne, come un foglio di calcolo, che rappresenta esattamente un tipo di entità. Per esempio, una tabella può rappresentare i dipendenti di un'azienda o gli acquisti effettuati, ma non entrambi.
+<br>Ogni riga, o record, di una tabella contiene informazioni su una singola entità. Per esempio, in una tabella che rappresenta gli impiegati, ogni riga rappresenta una singola persona. Ogni colonna, o campo, di una tabella contiene un singolo attributo per tutte le righe della tabella. Per esempio, in una tabella che rappresenta gli impiegati, potremmo avere una colonna contenente nome e cognome per tutti gli impiegati.
+<br>Mentre l'SQL può essere usato per creare e modificare i database, il primo focus di questo articolo sarà l'interrogazione dei database. Una query è una richiesta di dati da una tabella di database (o una combinazione di tabelle). L'interrogazione è un'abilità essenziale per un Data Scientist, poiché i dati necessari per le analisi spesso sono in database.
+<br>In SQL, è possibile selezionare i dati da una tabella utilizzando un'istruzione SELECT. Ad esempio, la seguente query seleziona una colonna da una tabella del dataset:
+
+<div style='mso-element:para-border-div;border:none;border-left:solid #33AACC 3.0pt;
+padding:0cm 0cm 0cm 0cm;background:#EBF4F7'>
+
+<p  style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt;
+background:#EBF4F7;border:none;mso-border-left-alt:solid #33AACC 3.0pt;
+padding:0cm;mso-padding-alt:0cm 0cm 0cm 0cm'><span style='font-size:10.0pt;
+font-family:"Courier New";mso-fareast-font-family:"Times New Roman";color:#3D4251;
+background:#EBF4F7;mso-fareast-language:IT'>SELECT <span class=SpellE>nome_variabile</span>
+FROM tabella;</span><span style='font-size:12.0pt;font-family:"Courier New";
+mso-fareast-font-family:"Times New Roman";color:#3D4251;mso-fareast-language:
+IT'><o:p></o:p></span></p>
+
+</div>
+<br>
+
+<p>Si può scrivere anche a capo:</p>
+
+<div style='mso-element:para-border-div;border:none;border-left:solid #33AACC 3.0pt;
+padding:0cm 0cm 0cm 0cm;background:#EBF4F7'><pre style='background:#EBF4F7;
+border:none;mso-border-left-alt:solid #33AACC 3.0pt;padding:0cm;mso-padding-alt:
+0cm 0cm 0cm 0cm'><code><span style='color:#3D4251;background:#EBF4F7'>SELECT </span></code><span
+class=SpellE><span style='color:#3D4251;background:#EBF4F7'>nome_variabile</span></span><code><span
+style='color:#3D4251;background:#EBF4F7'><o:p></o:p></span></code></pre><pre
+style='background:#EBF4F7;border:none;mso-border-left-alt:solid #33AACC 3.0pt;
+padding:0cm;mso-padding-alt:0cm 0cm 0cm 0cm'><code><span style='color:#3D4251;
+background:#EBF4F7'>FROM </span></code><span style='color:#3D4251;background:
+#EBF4F7'>tabella<code>;</code></span><span style='font-size:12.0pt;color:#3D4251'><o:p></o:p></span></pre></div>
+
+<p >In questa query, SELECT e FROM sono chiamate <span
+style='font-family:"Arial",sans-serif;color:#3D4251;background:white'>keywords</span>.
+In SQL, le parole chiave non sono case-sensitive, il che significa che si possono
+scrivere sia in minuscolo che in maiuscolo (è buona abitudine scrivere le
+parole chiave SQL maiuscole per distinguerle da altre parti della query, come i
+nomi delle colonne e delle tabelle).</p>
+
+<p >Per selezionare più colonne da una tabella, basta separare i
+nomi delle colonne con delle virgole:</p>
+
+<div style='mso-element:para-border-div;border:none;border-left:solid #33AACC 3.0pt;
+padding:0cm 0cm 0cm 0cm;background:#EBF4F7'><pre style='background:#EBF4F7;
+border:none;mso-border-left-alt:solid #33AACC 3.0pt;padding:0cm;mso-padding-alt:
+0cm 0cm 0cm 0cm'><code><span style='color:#3D4251;background:#EBF4F7'>SELECT </span></code><span
+style='color:#3D4251;background:#EBF4F7'>nome_variabile<code>1, </code>nome_variabile<code>2<o:p></o:p></code></span></pre><pre
+style='background:#EBF4F7;border:none;mso-border-left-alt:solid #33AACC 3.0pt;
+padding:0cm;mso-padding-alt:0cm 0cm 0cm 0cm'><code><span style='color:#3D4251;
+background:#EBF4F7'>FROM </span></code><span style='color:#3D4251;background:
+#EBF4F7'>tabella<code>;</code></span><span style='font-size:12.0pt;color:#3D4251'><o:p></o:p></span></pre></div>
+
+<p >A volte, è possibile che sia utile selezionare tutte le
+colonne da una tabella. Digitare il nome di ogni colonna sarebbe un problema,
+quindi c'è una comoda scorciatoia:</p>
+
+<div style='mso-element:para-border-div;border:none;border-left:solid #33AACC 3.0pt;
+padding:0cm 0cm 0cm 0cm;background:#EBF4F7'><pre style='background:#EBF4F7;
+border:none;mso-border-left-alt:solid #33AACC 3.0pt;padding:0cm;mso-padding-alt:
+0cm 0cm 0cm 0cm'><code><span style='color:#3D4251;background:#EBF4F7'>SELECT *<o:p></o:p></span></code></pre><pre
+style='background:#EBF4F7;border:none;mso-border-left-alt:solid #33AACC 3.0pt;
+padding:0cm;mso-padding-alt:0cm 0cm 0cm 0cm'><code><span style='color:#3D4251;
+background:#EBF4F7'>FROM tabella;</span></code><span style='font-size:12.0pt;
+color:#3D4251'><o:p></o:p></span></pre></div>
+
+<p >Se si desidera restituire solo un certo numero di risultati,
+è possibile utilizzare la parola chiave LIMIT per limitare il numero di righe
+restituite:</p>
+
+<div style='mso-element:para-border-div;border:none;border-left:solid #33AACC 3.0pt;
+padding:0cm 0cm 0cm 0cm;background:#EBF4F7'><pre style='background:#EBF4F7;
+border:none;mso-border-left-alt:solid #33AACC 3.0pt;padding:0cm;mso-padding-alt:
+0cm 0cm 0cm 0cm'><code><span style='color:#3D4251;background:#EBF4F7'>SELECT *<o:p></o:p></span></code></pre><pre
+style='background:#EBF4F7;border:none;mso-border-left-alt:solid #33AACC 3.0pt;
+padding:0cm;mso-padding-alt:0cm 0cm 0cm 0cm'><code><span style='color:#3D4251;
+background:#EBF4F7'>FROM tabella<o:p></o:p></span></code></pre><pre
+style='background:#EBF4F7;border:none;mso-border-left-alt:solid #33AACC 3.0pt;
+padding:0cm;mso-padding-alt:0cm 0cm 0cm 0cm'><code><span style='color:#3D4251;
+background:#EBF4F7'>LIMIT 6;</span></code><span style='font-size:12.0pt;
+color:#3D4251'><o:p></o:p></span></pre></div>
+
+<span style='font-size:11.0pt;line-height:107%;font-family:"Calibri",sans-serif;
+mso-ascii-theme-font:minor-latin;mso-fareast-font-family:Calibri;mso-fareast-theme-font:
+minor-latin;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:"Times New Roman";
+mso-bidi-theme-font:minor-bidi;mso-ansi-language:IT;mso-fareast-language:EN-US;
+mso-bidi-language:AR-SA'><br clear=all style='mso-special-character:line-break;
+page-break-before:always'>
+</span>
+      <br><br>
+        <br><br><br>
+  </div>
+
+
+   <!-- Footer -->
+    <footer>
+       <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <ul class="list-inline text-center">
+                        <li>
+                            <a href="https://twitter.com/SaccaggiGiacomo">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/in/giacomo-saccaggi-782439163/">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/GiacomoSaccaggi/">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                    <p class="copyright text-muted">Copyright &copy; GiacomoSaccaggi</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    </body>
+
+</html>
