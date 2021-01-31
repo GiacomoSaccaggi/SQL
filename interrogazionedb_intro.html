@@ -96,7 +96,21 @@
     </header>
 
     <div class="container">
-        SQL, che sta per Structured Query Language, è un linguaggio per interagire con i dati memorizzati in un database relazionale.
+        SQL, che sta per Structured Query Language, è un linguaggio per interagire, in origine, con i dati memorizzati in un database relazionale utilizzato ad oggi molto spesso anche per i database non relazionali.
+        <br>SQL è un linguaggio standard che è stato progettato per interrogare e gestire i dati nei sistemi di gestione di database
+        relazionali (RDBMS). Un RDBMS è un sistema di gestione di database basato sul modello relazionale (un modello semantico
+        per che a sua volta si basa su due rami matematici: la teoria degli insiemi e la logica dei predicati. Molti altri
+        linguaggi di programmazione e vari aspetti dell'informatica si sono evoluti praticamente grazie all'intuizione. Nella
+        misura in cui l'SQL è basato sul modello relazionale, esso si basa su una matematica applicata alla base ﬁ rm. Il T-SQL
+        sta su queste spalle molto ampie e solide. Microsoft fornisce T-SQL come dialetto o estensione di SQL in Microsoft SQL
+        Server, il suo RDBMS.
+        
+        Questa sezione fornisce un breve background teorico sull'SQL, la teoria degli insiemi e la logica dei predicati, il
+        modello relazionale e il ciclo di vita dei dati. Poiché questo libro non è né un libro di matematica né un libro di
+        design/modellazione dei dati, le informazioni teoriche qui fornite sono informali e non sono affatto complete.
+        L'obiettivo è quello di fornire un contesto per il linguaggio T-SQL e di fornire i punti chiave che sono parte
+        integrante della corretta comprensione del T-SQL in seguito nel libro.
+
 <br>Si può pensare a un database relazionale come a una raccolta di tabelle. Una tabella è solo un insieme di righe e colonne, come un foglio di calcolo, che rappresenta esattamente un tipo di entità. Per esempio, una tabella può rappresentare i dipendenti di un'azienda o gli acquisti effettuati, ma non entrambi.
 <br>Ogni riga, o record, di una tabella contiene informazioni su una singola entità. Per esempio, in una tabella che rappresenta gli impiegati, ogni riga rappresenta una singola persona. Ogni colonna, o campo, di una tabella contiene un singolo attributo per tutte le righe della tabella. Per esempio, in una tabella che rappresenta gli impiegati, potremmo avere una colonna contenente nome e cognome per tutti gli impiegati.
 <br>Mentre l'SQL può essere usato per creare e modificare i database, il primo focus di questo articolo sarà l'interrogazione dei database. Una query è una richiesta di dati da una tabella di database (o una combinazione di tabelle). L'interrogazione è un'abilità essenziale per un Data Scientist, poiché i dati necessari per le analisi spesso sono in database.
@@ -118,7 +132,7 @@ IT'><o:p></o:p></span></p>
 </div>
 <br>
 
-<p>Si può scrivere anche a capo:</p>
+<p>Per renderla più chiara si può scrivere anche a capo (maiuscole e minuscole sono a piacere):</p>
 
 <div style='mso-element:para-border-div;border:none;border-left:solid #33AACC 3.0pt;
 padding:0cm 0cm 0cm 0cm;background:#EBF4F7'><pre style='background:#EBF4F7;
@@ -171,14 +185,26 @@ restituite:</p>
 <div style='mso-element:para-border-div;border:none;border-left:solid #33AACC 3.0pt;
 padding:0cm 0cm 0cm 0cm;background:#EBF4F7'><pre style='background:#EBF4F7;
 border:none;mso-border-left-alt:solid #33AACC 3.0pt;padding:0cm;mso-padding-alt:
-0cm 0cm 0cm 0cm'><code><span style='color:#3D4251;background:#EBF4F7'>SELECT *<o:p></o:p></span></code></pre><pre
+0cm 0cm 0cm 0cm'><code><span style='color:#3D4251;background:#EBF4F7'>SELECT TOP 6 *<o:p></o:p></span></code></pre><pre
 style='background:#EBF4F7;border:none;mso-border-left-alt:solid #33AACC 3.0pt;
 padding:0cm;mso-padding-alt:0cm 0cm 0cm 0cm'><code><span style='color:#3D4251;
-background:#EBF4F7'>FROM tabella<o:p></o:p></span></code></pre><pre
-style='background:#EBF4F7;border:none;mso-border-left-alt:solid #33AACC 3.0pt;
+background:#EBF4F7'>FROM tabella;<o:p></o:p></span></code></pre></div>
+
+<br>In alcuni casi anche:<br>
+
+<div style='mso-element:para-border-div;border:none;border-left:solid #33AACC 3.0pt;
+padding:0cm 0cm 0cm 0cm;background:#EBF4F7'>
+    <pre style='background:#EBF4F7;
+border:none;mso-border-left-alt:solid #33AACC 3.0pt;padding:0cm;mso-padding-alt:
+0cm 0cm 0cm 0cm'><code><span style='color:#3D4251;background:#EBF4F7'>SELECT *<o:p></o:p></span></code></pre>
+    <pre style='background:#EBF4F7;border:none;mso-border-left-alt:solid #33AACC 3.0pt;
+padding:0cm;mso-padding-alt:0cm 0cm 0cm 0cm'><code><span style='color:#3D4251;
+background:#EBF4F7'>FROM tabella<o:p></o:p></span></code></pre>
+    <pre style='background:#EBF4F7;border:none;mso-border-left-alt:solid #33AACC 3.0pt;
 padding:0cm;mso-padding-alt:0cm 0cm 0cm 0cm'><code><span style='color:#3D4251;
 background:#EBF4F7'>LIMIT 6;</span></code><span style='font-size:12.0pt;
-color:#3D4251'><o:p></o:p></span></pre></div>
+color:#3D4251'><o:p></o:p></span></pre>
+</div>
 
 <span style='font-size:11.0pt;line-height:107%;font-family:"Calibri",sans-serif;
 mso-ascii-theme-font:minor-latin;mso-fareast-font-family:Calibri;mso-fareast-theme-font:
